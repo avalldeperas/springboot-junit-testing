@@ -5,41 +5,17 @@ import com.avalldeperas.springbootjunittesting.unittesting.data.SomeDataService;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
-/**
- * STUBS are not a good choice to unit testing: not maintainable and not clear.
- * F/ex: Any time we change the service interface, implementations would fail.
- */
-class SomeDataServiceStub implements SomeDataService {
-
-    @Override
-    public int[] retrieveAllData() {
-        return new int[] {1,2,3};
-    }
-}
-
-class SomeDataServiceEmptyStub implements SomeDataService {
-
-    @Override
-    public int[] retrieveAllData() {
-        return new int[] {};
-    }
-}
-
-class SomeDataServiceOneElementStub implements SomeDataService {
-
-    @Override
-    public int[] retrieveAllData() {
-        return new int[] {5};
-    }
-}
-
-public class SomeBusinessStubTest {
+public class SomeBusinessMockTest {
 
     @Test
     public void calculateSumUsingDataService_basic() {
         SomeBusinessImpl business = new SomeBusinessImpl();
-        business.setSomeDataService(new SomeDataServiceStub());
+        SomeDataService dataServiceMock = mock(SomeDataService.class);
+        when(dataServiceMock.retrieveAllData()).thenReturn(new int[] {1,2,3});
+        business.setSomeDataService(dataServiceMock);
         int actualResult = business.calculateSumUsingDataService();
         int expectedResult = 6;
 
@@ -49,7 +25,10 @@ public class SomeBusinessStubTest {
     @Test
     public void calculateSumUsingDataService_empty() {
         SomeBusinessImpl business = new SomeBusinessImpl();
-        business.setSomeDataService(new SomeDataServiceEmptyStub());
+        SomeDataService dataServiceMock = mock(SomeDataService.class);
+        when(dataServiceMock.retrieveAllData()).thenReturn(new int[]{});
+
+        business.setSomeDataService(dataServiceMock);
         int actualResult = business.calculateSumUsingDataService();
         int expectedResult = 0;
 
@@ -59,7 +38,10 @@ public class SomeBusinessStubTest {
     @Test
     public void calculateSumUsingDataService_oneValue() {
         SomeBusinessImpl business = new SomeBusinessImpl();
-        business.setSomeDataService(new SomeDataServiceOneElementStub());
+        SomeDataService dataServiceMock = mock(SomeDataService.class);
+        when(dataServiceMock.retrieveAllData()).thenReturn(new int[] { 5 });
+
+        business.setSomeDataService(dataServiceMock);
         int actualResult = business.calculateSumUsingDataService();
         int expectedResult = 5;
 
