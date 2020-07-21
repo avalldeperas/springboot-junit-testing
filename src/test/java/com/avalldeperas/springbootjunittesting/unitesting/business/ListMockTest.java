@@ -1,6 +1,10 @@
 package com.avalldeperas.springbootjunittesting.unitesting.business;
 
+import org.apache.juli.logging.Log;
+import org.apache.juli.logging.LogFactory;
 import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 
@@ -8,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.*;
 
+@Slf4j
 public class ListMockTest {
 
     private List<String> mock = mock(List.class);
@@ -51,4 +56,20 @@ public class ListMockTest {
         verify(mock, atMost(2)).get(anyInt());
         verify(mock, never()).get(2);
     }
+
+    @Test
+    public void argumentCapturing() {
+        mock.add("SomeString");
+
+        // verification of which argument has been passed
+        ArgumentCaptor<String> captor = ArgumentCaptor.forClass(String.class);
+        verify(mock).add(captor.capture());
+
+        log.info("captor capture = " + captor.capture());
+        log.info("captor value = " + captor.getValue());
+
+        assertEquals("SomeString", captor.getValue());
+
+    }
+
 }
