@@ -15,4 +15,14 @@ public class SomeBusinessTest {
 
         assertEquals(expectedResult, actualResult);
     }
+
+    @Test
+    public void calculateSum_empty() {
+        SomeBusinessImpl business = new SomeBusinessImpl();
+        int actualResult = business.calculateSum(new int[]{});
+        int expectedResult = 0;
+
+        assertEquals(expectedResult, actualResult);
+    }
+
 }
