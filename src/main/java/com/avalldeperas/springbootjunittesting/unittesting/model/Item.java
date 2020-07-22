@@ -1,27 +1,30 @@
 package com.avalldeperas.springbootjunittesting.unittesting.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
 
 @Entity
-@AllArgsConstructor
+@RequiredArgsConstructor
+@NoArgsConstructor
 @Data
 public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @NonNull private Integer id;
 
     @Column(name = "name")
-    private String name;
+    @NonNull private String name;
 
     @Column(name = "price")
-    private int price;
+    @NonNull private Integer price;
 
     @Column(name = "quantity")
-    private int quantity;
+    @NonNull private Integer quantity;
 
     @Transient
     private int value;
