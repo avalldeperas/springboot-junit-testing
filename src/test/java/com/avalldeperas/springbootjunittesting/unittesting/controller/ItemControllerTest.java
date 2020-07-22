@@ -47,7 +47,7 @@ public class ItemControllerTest {
     @Test
     public void itemFromBusinessService_basic() throws Exception {
         when(businessService.retrieveHardcodedItem()).thenReturn(
-                new Item(2, "Item2", 10, 10)
+                new Item(2, "Item2", 10, 10, 20)
         );
 
         RequestBuilder request = MockMvcRequestBuilders
@@ -56,8 +56,7 @@ public class ItemControllerTest {
 
         MvcResult result = mockMvc.perform(request)
                 .andExpect(status().isOk())
-                .andExpect(content().json("{id:2, name:Item2, price:10, quantity:10}"))
+                .andExpect(content().json("{id:2, name:Item2, price:10, quantity:10, value:20}"))
                 .andReturn();
-
     }
 }
