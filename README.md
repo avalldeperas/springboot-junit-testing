@@ -10,12 +10,19 @@ through Spring Boot Starter Test.
 * [JUnit](https://junit.org/junit5/) is the most popular Java Unit Testing framework.
 * [Mockito](https://site.mockito.org/) is the most popular mocking framework. 
 
-This project goal is to learn to write independent and good unit tests for 
-RESTful webservices talking with multiple layers: web, business and data. 
+#### Goals
+* write great Unit and Integration tests using Spring Boot Starter Test
+* write unit tests using Mocks and Spys created with Mockito
+* write independent unit tests for RESTful web services talking with multiple layers - web, business and data
+* write integration tests using an in memory database - H2
+* use all the frameworks that are part of Spring Boot Starter Test - JUnit, Spring Test, Spring Boot Test, AssertJ, Hamcrest, Mockito, JSONassert and JsonPath.
+* use the most important Unit Testing Annotations - @SpringBootTest, @WebMvcTest, @DataJpaTest and @MockBean.
+
 
 #### JUnit 5 vs JUnit 4
 Functionally speaking, JUnit 5 is as simple as JUnit 4.
 There are just a few simple annotation changes: 
-![Junit5 changes](documentation/junit5-changes.png "JUnit5 changes")
+
+![JUnit5 changes](documentation/junit5-changes.png "JUnit5 changes")
 
 
