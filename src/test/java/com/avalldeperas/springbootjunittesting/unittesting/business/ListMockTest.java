@@ -1,4 +1,4 @@
-package com.avalldeperas.springbootjunittesting.unitesting.business;
+package com.avalldeperas.springbootjunittesting.unittesting.business;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;

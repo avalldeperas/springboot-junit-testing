@@ -30,7 +30,6 @@ public class ItemControllerTest {
                 .andExpect(content().json("{\"id\":1,\"name\":\"Ball\",\"price\":10,\"quantity\":100}"))
                 .andReturn();           // andReturn to get the values
 
-        // we can omit following line as we already check it above
-//        assertEquals("Hello World", result.getResponse().getContentAsString());
+        // JSONAssert.assertEquals(expected, actual, strict); <artifactId>jsonassert</artifactId>
     }
 }

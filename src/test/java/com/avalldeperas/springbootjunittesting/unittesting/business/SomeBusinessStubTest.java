@@ -1,6 +1,5 @@
-package com.avalldeperas.springbootjunittesting.unitesting.business;
+package com.avalldeperas.springbootjunittesting.unittesting.business;
 
-import com.avalldeperas.springbootjunittesting.unittesting.business.SomeBusinessImpl;
 import com.avalldeperas.springbootjunittesting.unittesting.data.SomeDataService;
 import org.junit.jupiter.api.Test;
 
