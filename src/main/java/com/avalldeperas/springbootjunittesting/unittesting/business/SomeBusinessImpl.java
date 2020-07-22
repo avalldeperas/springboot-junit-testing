@@ -1,8 +1,6 @@
 package com.avalldeperas.springbootjunittesting.unittesting.business;
 
 import com.avalldeperas.springbootjunittesting.unittesting.data.SomeDataService;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 public class SomeBusinessImpl {
