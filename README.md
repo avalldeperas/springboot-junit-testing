@@ -12,21 +12,24 @@ through Spring Boot Starter Test.
 
 #### Application Structure
 The application structure is the following: 
+
 ![Application Structure](documentation/app_structure.png "Application Structure")
 
+
 #### Goals
-* write great Unit and Integration tests using Spring Boot Starter Test
-* write unit tests using Mocks and Spys created with Mockito
-* write independent unit tests for RESTful web services talking with multiple layers - web, business and data
-* write integration tests using an in memory database - H2
-* use all the frameworks that are part of Spring Boot Starter Test - JUnit, Spring Test, Spring Boot Test, AssertJ, Hamcrest, Mockito, JSONassert and JsonPath.
-* use the most important Unit Testing Annotations - @SpringBootTest, @WebMvcTest, @DataJpaTest and @MockBean.
+* Write great Unit and Integration tests using Spring Boot Starter Test
+* Write unit tests using Mocks and Spys created with Mockito
+* Write independent unit tests for RESTful web services talking with multiple layers - web, business and data
+* Write integration tests using an in memory database - H2
+* Use all the frameworks that are part of Spring Boot Starter Test - JUnit, Spring Test, Spring Boot Test, AssertJ, Hamcrest, Mockito, JSONassert and JsonPath.
+* Use the most important Unit Testing Annotations - @SpringBootTest, @WebMvcTest, @DataJpaTest and @MockBean.
 
 #### JUnit 5 vs JUnit 4
 Functionally speaking, JUnit 5 is as simple as JUnit 4.
 There are just a few simple annotation changes: 
 
 ![JUnit5 changes](documentation/junit5-changes.png "JUnit5 changes")
+
 
 #### Recommended docs
 * [xunitpatterns](http://xunitpatterns.com)
