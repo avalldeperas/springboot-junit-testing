@@ -18,11 +18,13 @@ through Spring Boot Starter Test.
 * use all the frameworks that are part of Spring Boot Starter Test - JUnit, Spring Test, Spring Boot Test, AssertJ, Hamcrest, Mockito, JSONassert and JsonPath.
 * use the most important Unit Testing Annotations - @SpringBootTest, @WebMvcTest, @DataJpaTest and @MockBean.
 
-
 #### JUnit 5 vs JUnit 4
 Functionally speaking, JUnit 5 is as simple as JUnit 4.
 There are just a few simple annotation changes: 
 
 ![JUnit5 changes](documentation/junit5-changes.png "JUnit5 changes")
 
+#### Application Structure
+The application structure is the following: 
+![Application Structure](documentation/app_structure.png "Application Structure")
 

@@ -6,6 +6,7 @@ import org.skyscreamer.jsonassert.JSONAssert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.test.context.TestPropertySource;
 
 /**
  * This Integration Test (IT) launches up the entire Spring Boot application, present in the main class
@@ -14,6 +15,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
  * launch up all components, in-memory DB, etc.
  */
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT) // picks an available port
+@TestPropertySource(locations = {"classpath:test-configuration.properties"})
 public class ItemControllerIT {
 
     @Autowired
