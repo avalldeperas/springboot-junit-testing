@@ -10,6 +10,10 @@ through Spring Boot Starter Test.
 * [JUnit](https://junit.org/junit5/) is the most popular Java Unit Testing framework.
 * [Mockito](https://site.mockito.org/) is the most popular mocking framework. 
 
+#### Application Structure
+The application structure is the following: 
+![Application Structure](documentation/app_structure.png "Application Structure")
+
 #### Goals
 * write great Unit and Integration tests using Spring Boot Starter Test
 * write unit tests using Mocks and Spys created with Mockito
@@ -24,7 +28,5 @@ There are just a few simple annotation changes:
 
 ![JUnit5 changes](documentation/junit5-changes.png "JUnit5 changes")
 
-#### Application Structure
-The application structure is the following: 
-![Application Structure](documentation/app_structure.png "Application Structure")
-
+#### Recommended docs
+* [xunitpatterns](http://xunitpatterns.com)
